@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#fff4f8">
+<title>旅行先アキネーター</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="travel-page">
+<main class="screen travel-screen">
+  <h1>誕生日の旅先、<br>どこにしよう？</h1>
+<p class="subtitle">いくつかの質問に答えて、<br>9.22–23にぴったりの旅先を見つけよう。</p>
+
+<section id="introCard" class="intro-card">
+  <div class="intro-icon">✈️</div>
+  <h2>ふたりの旅先診断</h2>
+  <p>直感で答えていくだけ。<br>なるみに合う旅先を探します。</p>
+  <button id="startButton" class="main-button">旅先を探す →</button>
+</section>
+
+  <section id="quizArea" class="is-hidden">
+    <div class="progress-area">
+      <div class="progress-track"><div id="progressBar"></div></div>
+      <span id="progressText">1 / 32</span>
+    </div>
+
+    <div class="question-box">
+      <img id="questionImage" class="question-image" alt="旅行イメージ" loading="eager">
+      <div class="question-number" id="questionNumber">QUESTION 01</div>
+      <h2 id="questionTitle"></h2>
+      <div id="answers" class="answer-list"></div>
+    </div>
+
+    <button id="backButton" class="sub-button">← ひとつ前の質問へ</button>
+  </section>
+
+  <section id="thinkingBox" class="result-box is-hidden thinking-box">
+    <div class="thinking-dots"><span></span><span></span><span></span></div>
+    <h2>診断中…</h2>
+    <p>なるみにぴったりな旅行先を<br>探しています。</p>
+  </section>
+
+  <section id="travelResult" class="result-box is-hidden result-special">
+    <p class="result-label">今回の旅行先は……</p>
+    <div class="result-reveal">✨</div>
+    <h2 id="destinationResult"></h2>
+    <div id="destinationTags" class="result-tags"></div>
+    <p id="destinationComment"></p>
+    <div id="destinationDetails" class="destination-details"></div>
+    <button id="restartButton" class="main-button">
+      もう一度診断する ↻
+    </button>
+  </section>
+</main>
+<script src="js/travel.js"></script>
+</body>
+</html>
